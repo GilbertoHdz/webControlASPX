@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>System.Text.Encoding</id>
+    <version>4.0.10-beta-22816</version>
+    <title>System.Text.Encoding</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</licenseUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Provides base abstract encoding classes for converting blocks of characters to and from blocks of bytes.
+
+Commonly Used Types:
+System.Text.Encoding
+System.Text.DecoderFallbackException
+System.Text.Decoder
+System.Text.EncoderFallbackException
+System.Text.Encoder
+System.Text.EncoderFallback
+System.Text.EncoderFallbackBuffer
+System.Text.DecoderFallback
+System.Text.DecoderFallbackBuffer
+System.Text.DecoderExceptionFallback</description>
+    <summary>Provides base abstract encoding classes for converting blocks of characters to and from blocks of bytes.</summary>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <dependencies>
+      <dependency id="System.Runtime" version="4.0.20-beta-22816" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="mscorlib" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
