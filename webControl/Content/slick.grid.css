@@ -18,23 +18,23 @@ classes should alter those!
   overflow: hidden;
 }
 
-/* Encabezado de la grilla */
-
 .slick-header-column.ui-state-default {
   position: relative;
   display: inline-block;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  height: 20px;
-  line-height: 13px;
+  height: 16px;
+  line-height: 16px;
   margin: 0;
   padding: 4px;
-  border-right: 1px solid silver;
+  border-right: 0px;
   border-left: 0px;
   border-top: 0px;
   border-bottom: 0px;
   float: left;
+  color: #000;
+
 }
 
 .slick-headerrow-column.ui-state-default {
@@ -50,16 +50,14 @@ classes should alter those!
   width: 8px;
   height: 5px;
   margin-left: 4px;
-  margin-top: 6px;
-  float: left;
 }
 
 .slick-sort-indicator-desc {
-  background: url(images/sort-desc.gif);
+  background: url(imagenes/sort-desc.gif);
 }
 
 .slick-sort-indicator-asc {
-  background: url(images/sort-asc.gif);
+  background: url(imagenes/sort-asc.gif);
 }
 
 .slick-resizable-handle {

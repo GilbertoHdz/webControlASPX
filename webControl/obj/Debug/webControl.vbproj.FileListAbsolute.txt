@@ -118,3 +118,17 @@ D:\Dev\DotNet\webControl\webControl\obj\Debug\webControl.vbproj.GenerateResource
 D:\Dev\DotNet\webControl\webControl\obj\Debug\webControl.dll
 D:\Dev\DotNet\webControl\webControl\obj\Debug\WebForms_Basic.xml
 D:\Dev\DotNet\webControl\webControl\obj\Debug\webControl.pdb
+D:\Dev\DotNet\webControl\webControl\bin\ClosedXML.dll
+D:\Dev\DotNet\webControl\webControl\bin\DocumentFormat.OpenXml.dll
+D:\Dev\DotNet\webControl\webControl\bin\ExcelFile.net.dll
+D:\Dev\DotNet\webControl\webControl\bin\ICSharpCode.SharpZipLib.dll
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.dll
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.OOXML.dll
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.OpenXml4Net.dll
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.OpenXmlFormats.dll
+D:\Dev\DotNet\webControl\webControl\bin\ClosedXML.xml
+D:\Dev\DotNet\webControl\webControl\bin\ExcelFile.net.pdb
+D:\Dev\DotNet\webControl\webControl\bin\ExcelFile.net.xml
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.xml
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.OOXML.xml
+D:\Dev\DotNet\webControl\webControl\bin\NPOI.OpenXml4Net.xml

@@ -1,0 +1,1027 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExcelFile.net</name>
+    </assembly>
+    <members>
+        <member name="T:ExcelFile.net.Enumerable.EnumerableCell">
+            <summary>
+                某一行的单元格枚举器
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.Enumerable.EnumerableCell.#ctor(NPOI.SS.UserModel.IRow)">
+            <summary>
+                构造某一行的单元格枚举器
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="T:ExcelFile.net.Enumerable.EnumerableRow">
+            <summary>
+                某个工作表的行的枚举器
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.Enumerable.EnumerableRow.#ctor(NPOI.SS.UserModel.ISheet)">
+            <summary>
+                构造某个工作表的行的枚举器
+            </summary>
+            <param name="sheet"></param>
+        </member>
+        <member name="T:ExcelFile.net.Enumerable.EnumerableSheet">
+            <summary>
+                某个工作簿的工作表的枚举器
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.Enumerable.EnumerableSheet.#ctor(NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+                构造某个工作簿的工作表的枚举器
+            </summary>
+            <param name="workbook"></param>
+        </member>
+        <member name="T:ExcelFile.net.Enumerable.ExcelExtension">
+            <summary>
+                提供一组用于查询实现 IEnumerable&lt;T> 的对象的 static（在 Visual Basic 中为 Shared）方法。
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.Enumerable.ExcelExtension.AsEnumerable(NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+                返回类型为 IEnumerable&lt;T> 的输入。
+            </summary>
+            <param name="workbook"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.Enumerable.ExcelExtension.AsEnumerable(NPOI.SS.UserModel.ISheet)">
+            <summary>
+                返回类型为 IEnumerable&lt;T> 的输入。
+            </summary>
+            <param name="sheet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.Enumerable.ExcelExtension.AsEnumerable(NPOI.SS.UserModel.IRow)">
+            <summary>
+                返回类型为 IEnumerable&lt;T> 的输入。
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExcelFile.net.ExcelDataException">
+            <summary>
+                Excel数据异常
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.ExcelDataException.#ctor(System.Int32,System.Int32)">
+            <summary>
+                构造ExcelDataException对象
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="columnIndex"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelDataException.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+                构造ExcelDataException对象
+            </summary>
+            <param name="message"></param>
+            <param name="rowIndex"></param>
+            <param name="columnIndex"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelDataException.#ctor(System.String,System.Exception,System.Int32,System.Int32)">
+            <summary>
+                构造ExcelDataException对象
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="rowIndex"></param>
+            <param name="columnIndex"></param>
+        </member>
+        <member name="P:ExcelFile.net.ExcelDataException.RowIndex">
+            <summary>
+                行索引
+            </summary>
+        </member>
+        <member name="P:ExcelFile.net.ExcelDataException.ColumnIndex">
+            <summary>
+                列索引
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.IExcelStyle">
+            <summary>
+                <para>
+                    背景色：Background
+                </para>
+                <para>
+                    边框及边框颜色：Border、BorderTop、BorderBottom、BorderLeft、BorderRight
+                </para>
+                <para>
+                    对齐：Align、VerticalAlign
+                </para>
+                <para>
+                    文字：WrapText、Italic、Underline、FontSize、Font、Color、Bold
+                </para>
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Background(System.Int16)">
+            <summary>
+                背景色
+            </summary>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.BorderTop(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                上边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.BorderBottom(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                下边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.BorderLeft(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                左边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.BorderRight(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                右边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Border(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Align(NPOI.SS.UserModel.HorizontalAlignment)">
+            <summary>
+                水平对齐
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.VerticalAlign(NPOI.SS.UserModel.VerticalAlignment)">
+            <summary>
+                垂直对齐
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.WrapText(System.Boolean)">
+            <summary>
+                文本自动换行
+            </summary>
+            <param name="wrapText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Color(System.Int16)">
+            <summary>
+                前景色
+            </summary>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Italic">
+            <summary>
+                斜体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Underline(NPOI.SS.UserModel.FontUnderlineType)">
+            <summary>
+                下划线
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.FontSize(System.Double)">
+            <summary>
+                字体尺寸
+            </summary>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Font(System.String)">
+            <summary>
+                字体
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelStyle.Bold">
+            <summary>
+                加粗
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ExcelFile.net.IExcelStyle.Style">
+            <summary>
+                构造的Excel样式对象
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.ExcelStyle">
+            <summary>
+                <para>
+                    背景色：Background
+                </para>
+                <para>
+                    边框及边框颜色：Border、BorderTop、BorderBottom、BorderLeft、BorderRight
+                </para>
+                <para>
+                    对齐：Align、VerticalAlign
+                </para>
+                <para>
+                    文字：WrapText、Italic、Underline、FontSize、Font、Color、Bold
+                </para>
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.#ctor(NPOI.SS.UserModel.ICellStyle,NPOI.SS.UserModel.IFont)">
+            <summary>
+                构造Excel样式对象
+            </summary>
+            <param name="style"></param>
+            <param name="font"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Background(System.Int16)">
+            <summary>
+                背景色
+            </summary>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.BorderTop(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                上边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.BorderBottom(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                下边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.BorderLeft(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                左边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.BorderRight(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                右边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Border(NPOI.SS.UserModel.BorderStyle,System.Int16)">
+            <summary>
+                边框
+            </summary>
+            <param name="borderStyle"></param>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Align(NPOI.SS.UserModel.HorizontalAlignment)">
+            <summary>
+                水平对齐
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.VerticalAlign(NPOI.SS.UserModel.VerticalAlignment)">
+            <summary>
+                垂直对齐
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.WrapText(System.Boolean)">
+            <summary>
+                文本自动换行
+            </summary>
+            <param name="wrapText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Color(System.Int16)">
+            <summary>
+                前景色
+            </summary>
+            <param name="HSSFColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Italic">
+            <summary>
+                斜体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Underline(NPOI.SS.UserModel.FontUnderlineType)">
+            <summary>
+                下划线
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.FontSize(System.Double)">
+            <summary>
+                字体尺寸
+            </summary>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Font(System.String)">
+            <summary>
+                字体
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelStyle.Bold">
+            <summary>
+                加粗
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ExcelFile.net.ExcelStyle.Style">
+            <summary>
+                构造的Excel样式对象
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.IExcelFile">
+            <summary>
+                <para>
+                    内容：工作表Sheet()、行Row()、单元格Cell()、空的单元格Empty()、合并单元格Cell()
+                </para>
+                <para>
+                    单元格样式：默认样式Style、新样式NewStyle()、内联样式Cell()、行样式Row()
+                </para>
+                <para>
+                    列样式：列宽Sheet()
+                </para>
+                <para>
+                    行样式：默认行高DefaultRowHeight()、内联行高Row()
+                </para>
+                <para>
+                    输出：本地文件Save()、远程下载Save()
+                </para>
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.NewStyle">
+            <summary>
+                新建样式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Sheet(System.Int32[])">
+            <summary>
+                新建工作表
+            </summary>
+            <param name="columnWidths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Sheet(System.String,System.Int32[])">
+            <summary>
+                新建工作表
+            </summary>
+            <param name="name"></param>
+            <param name="widths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.DefaultRowHeight(System.Int32)">
+            <summary>
+                默认行高
+            </summary>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Row(ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建行
+            </summary>
+            <param name="rowStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Row(System.Int16,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建行
+            </summary>
+            <param name="height"></param>
+            <param name="rowStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Empty(System.Int32)">
+            <summary>
+                新建空单元格
+            </summary>
+            <param name="colspan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.String,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.String,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.Double,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.Double,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.Boolean,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.Boolean,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.DateTime,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Cell(System.DateTime,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Save(System.Web.HttpResponse,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName">带扩展名</param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Save(System.String)">
+            <summary>
+                本地保存Excel文件
+            </summary>
+            <param name="file">带扩展名</param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelFile.Save(System.Web.HttpResponseBase,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName">带扩展名</param>
+        </member>
+        <member name="P:ExcelFile.net.IExcelFile.Style">
+            <summary>
+                获得默认样式
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.ExcelFile">
+            <summary>
+                <para>
+                    内容：工作表Sheet()、行Row()、单元格Cell()、空的单元格Empty()、合并单元格Cell()
+                </para>
+                <para>
+                    单元格样式：默认样式Style、新样式NewStyle()、内联样式Cell()、行样式Row()
+                </para>
+                <para>
+                    列样式：列宽Sheet()
+                </para>
+                <para>
+                    行样式：默认行高DefaultRowHeight()、内联行高Row()
+                </para>
+                <para>
+                    输出：本地文件Save()、远程下载Save()
+                </para>
+            </summary>
+        </member>
+        <member name="F:ExcelFile.net.ExcelFile.Workbook">
+            <summary>
+                当前工作簿
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.#ctor(System.Boolean)">
+            <summary>
+                构造Excel文件对象
+            </summary>
+            <param name="is2007OrLater"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.NewStyle">
+            <summary>
+                新建样式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Sheet(System.Int32[])">
+            <summary>
+                新建工作表
+            </summary>
+            <param name="columnWidths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Sheet(System.String,System.Int32[])">
+            <summary>
+                新建工作表
+            </summary>
+            <param name="name"></param>
+            <param name="widths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.DefaultRowHeight(System.Int32)">
+            <summary>
+                默认行高
+            </summary>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Row(ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建行
+            </summary>
+            <param name="rowStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Row(System.Int16,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建行
+            </summary>
+            <param name="height"></param>
+            <param name="rowStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Empty(System.Int32)">
+            <summary>
+                新建空单元格
+            </summary>
+            <param name="colspan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.String,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.String,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.Double,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.Double,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.Boolean,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.Boolean,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.DateTime,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Cell(System.DateTime,System.Int32,System.Int32,ExcelFile.net.ExcelStyle)">
+            <summary>
+                新建单元格
+            </summary>
+            <param name="value"></param>
+            <param name="rowspan"></param>
+            <param name="colspan"></param>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Save(System.Web.HttpResponse,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName">带扩展名</param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Save(System.String)">
+            <summary>
+                本地保存Excel文件
+            </summary>
+            <param name="file">带扩展名</param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelFile.Save(System.Web.HttpResponseBase,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName">带扩展名</param>
+        </member>
+        <member name="P:ExcelFile.net.ExcelFile.Style">
+            <summary>
+                获得默认样式
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.IExcelEditor">
+            <summary>
+                向Excel模板中插入数据的接口
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Set(System.String,System.String)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Set(System.String,System.Double,System.String)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Set(System.String,System.Boolean)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Set(System.String,System.DateTime,System.String)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Set``1(System.String,System.Collections.Generic.IList{``0},System.Boolean,System.Type)">
+            <summary>
+                设置单元格的值
+                在外部缓存T的Type会提高性能
+            </summary>
+            <param name="name"></param>
+            <param name="values"></param>
+            <param name="willCopyRow"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Save(System.Web.HttpResponse,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Save(System.String)">
+            <summary>
+                本地保存Excel文件
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.Save(System.Web.HttpResponseBase,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.UpdateFormula">
+            <summary>
+                更新Formula
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.SaveAsync(System.Web.HttpResponse,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.SaveAsync(System.String)">
+            <summary>
+                本地保存Excel文件
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:ExcelFile.net.IExcelEditor.SaveAsync(System.Web.HttpResponseBase,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:ExcelFile.net.IExcelEditor.StartMark">
+            <summary>
+                开始标记
+            </summary>
+        </member>
+        <member name="P:ExcelFile.net.IExcelEditor.EndMark">
+            <summary>
+                结束标记
+            </summary>
+        </member>
+        <member name="P:ExcelFile.net.IExcelEditor.Separator">
+            <summary>
+                分隔符
+            </summary>
+        </member>
+        <member name="P:ExcelFile.net.IExcelEditor.WarningMessage">
+            <summary>
+                警告信息
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.ExcelEditor">
+            <summary>
+                向Excel模板中插入数据的类
+            </summary>
+        </member>
+        <member name="F:ExcelFile.net.ExcelEditor.Workbook">
+            <summary>
+                当前工作簿
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+                构造Excel编辑对象
+            </summary>
+            <param name="file"></param>
+            <param name="is2007OrLater"></param>
+            <param name="willJudgeByExtensionName"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Set(System.String,System.String)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Set(System.String,System.Double,System.String)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Set(System.String,System.Boolean)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Set(System.String,System.DateTime,System.String)">
+            <summary>
+                设置单元格的值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Set``1(System.String,System.Collections.Generic.IList{``0},System.Boolean,System.Type)">
+            <summary>
+                设置单元格的值
+                在外部缓存T的Type会提高性能
+            </summary>
+            <param name="name"></param>
+            <param name="values"></param>
+            <param name="willCopyRow"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.GetPlaceHolderName(System.String)">
+            <summary>
+                "VariableA"->"{VariableA}"
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Combine(System.String,System.String)">
+            <summary>
+                "ClassA"、"MemberB"->"ClassA-MemberB"
+            </summary>
+            <param name="name"></param>
+            <param name="memberName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.GetStartOfPlaceHolderName(System.String)">
+            <summary>
+                "ClassA"->"{ClassA-"
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Save(System.Web.HttpResponse,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Save(System.String)">
+            <summary>
+                本地保存Excel文件
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.Save(System.Web.HttpResponseBase,System.String)">
+            <summary>
+                远程下载Excel文件，MVC中return new EmptyResult();
+            </summary>
+            <param name="response"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelEditor.UpdateFormula">
+            <summary>
+                更新Formula
+            </summary>
+        </member>
+        <member name="P:ExcelFile.net.ExcelEditor.WarningMessage">
+            <summary>
+                警告信息
+            </summary>
+        </member>
+        <member name="T:ExcelFile.net.ExcelUtils">
+            <summary>
+                提供Excel文件输入输出方法
+            </summary>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.New(System.String,System.IO.FileMode,System.IO.FileAccess,System.Boolean,System.Boolean)">
+            <summary>
+                读取Excel文件
+            </summary>
+            <param name="file"></param>
+            <param name="fileMode"></param>
+            <param name="fileAccess"></param>
+            <param name="is2007OrLater"></param>
+            <param name="willJudgeByExtensionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.New(System.Boolean)">
+            <summary>
+                新建空Excel工作簿
+            </summary>
+            <param name="is2007OrLater"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.New(System.IO.Stream,System.Boolean)">
+            <summary>
+                从流中读取Excel工作簿
+            </summary>
+            <param name="stream"></param>
+            <param name="is2007OrLater"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.Save(NPOI.SS.UserModel.IWorkbook,System.Web.HttpResponse,System.String)">
+            <summary>
+                远程下载Excel文件
+            </summary>
+            <param name="response"></param>
+            <param name="fileName">带扩展名</param>
+            <param name="workbook"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.Save(NPOI.SS.UserModel.IWorkbook,System.String)">
+            <summary>
+                本地保存Excel文件
+            </summary>
+            <param name="file">带扩展名</param>
+            <param name="workbook"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.Save(NPOI.SS.UserModel.IWorkbook,System.Web.HttpResponseBase,System.String)">
+            <summary>
+                远程下载Excel文件
+            </summary>
+            <param name="response"></param>
+            <param name="fileName">带扩展名</param>
+            <param name="workbook"></param>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.GetString(NPOI.SS.UserModel.ICell)">
+            <summary>
+                取字符串
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+            <exception cref="T:ExcelFile.net.ExcelDataException"></exception>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.GetNumber(NPOI.SS.UserModel.ICell)">
+            <summary>
+                取数字
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+            <exception cref="T:ExcelFile.net.ExcelDataException"></exception>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.GetBoolean(NPOI.SS.UserModel.ICell)">
+            <summary>
+                取Boolean
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+            <exception cref="T:ExcelFile.net.ExcelDataException"></exception>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.GetDate(NPOI.SS.UserModel.ICell)">
+            <summary>
+                取日期
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+            <exception cref="T:ExcelFile.net.ExcelDataException"></exception>
+        </member>
+        <member name="M:ExcelFile.net.ExcelUtils.GetFormulaEvaluator(NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+                获得Workbook的FormulaEvaluator
+            </summary>
+            <param name="workbook"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

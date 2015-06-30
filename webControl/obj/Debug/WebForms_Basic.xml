@@ -6,7 +6,23 @@ webControl
 </name>
 </assembly>
 <members>
-<member name="F:webControl.Login.ErrorMessage">
+<member name="F:webControl._Default.btnExportar">
+	<summary>
+btnExportar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl._Default.btnConsultar">
+	<summary>
+btnConsultar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Login.ErrorMessage">
 	<summary>
 ErrorMessage control.
 </summary>
@@ -259,6 +275,270 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:webControl.SiteMaster.MainContent">
 	<summary>
 MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.lblTab1">
+	<summary>
+lblTab1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.lblTab2">
+	<summary>
+lblTab2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.lblGrupo">
+	<summary>
+lblGrupo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.ddlGrupos">
+	<summary>
+ddlGrupos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.lblGrupos">
+	<summary>
+lblGrupos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.hdnIdGrupo">
+	<summary>
+hdnIdGrupo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.btnExportar">
+	<summary>
+btnExportar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.btnConsultar">
+	<summary>
+btnConsultar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.UpdatePanel4">
+	<summary>
+UpdatePanel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.btnControlTab">
+	<summary>
+btnControlTab control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.hdnTabSeleccionado">
+	<summary>
+hdnTabSeleccionado control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.hdnDataFiltro">
+	<summary>
+hdnDataFiltro control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Ejecutivo.hdnJsonSgrid">
+	<summary>
+hdnJsonSgrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.lblTab1">
+	<summary>
+lblTab1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.lblTab2">
+	<summary>
+lblTab2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.lblGrupo">
+	<summary>
+lblGrupo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.ddlGrupos">
+	<summary>
+ddlGrupos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.lblGrupos">
+	<summary>
+lblGrupos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.hdnIdGrupo">
+	<summary>
+hdnIdGrupo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.btnExportar">
+	<summary>
+btnExportar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.btnConsultar">
+	<summary>
+btnConsultar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.UpdatePanel4">
+	<summary>
+UpdatePanel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.btnControlTab">
+	<summary>
+btnControlTab control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.hdnTabSeleccionado">
+	<summary>
+hdnTabSeleccionado control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.hdnDataFiltro">
+	<summary>
+hdnDataFiltro control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Promedio_Grupo.hdnJsonSgrid">
+	<summary>
+hdnJsonSgrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.lblTab1">
+	<summary>
+lblTab1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.lblTab2">
+	<summary>
+lblTab2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.btnExportar">
+	<summary>
+btnExportar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.btnConsultar">
+	<summary>
+btnConsultar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.UpdatePanel4">
+	<summary>
+UpdatePanel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.btnControlTab">
+	<summary>
+btnControlTab control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:webControl.Apertura.hdnTabSeleccionado">
+	<summary>
+hdnTabSeleccionado control.
 </summary>
 	<remarks>
 Auto-generated field.

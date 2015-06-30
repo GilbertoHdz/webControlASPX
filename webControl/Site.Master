@@ -17,6 +17,8 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/estilos.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -45,6 +47,8 @@
 
         <script src="Scripts/jquery-ui-1.11.4.min.js"></script>
         <script src="Scripts/jquery.event.drag.js"></script>
+        <script src="Scripts/prettify.js"></script>
+        <script src="Scripts/jquery.multiselect.js"></script>
 
         <script src="Scripts/SlickGrid/slick.core.js"></script>
         <script src="Scripts/SlickGrid/slick.dataview.js"></script>
@@ -66,9 +70,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/">Insignias</a></li>
+                        <li><a runat="server" href="~/Apertura">Apertura</a></li>
+                        <li><a runat="server" href="~/Promedio_Grupo">Promedio Grupo</a></li>
+                        <li><a runat="server" href="~/Ejecutivo">Ejecutivo</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
